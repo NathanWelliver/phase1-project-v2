@@ -1,0 +1,14 @@
+{
+    "songs": [
+        {
+            "title": "Titanium",
+            "audio": "audio/titanium-170190.mp3",
+            "cover": "photos/TitaniumSongImg.jpg"
+        },
+        {
+            "title": "Once in Paris",
+            "audio": "audio/once-in-paris-168895.mp3",
+            "cover": "photos/Once in Paris.jpg"
+        }
+    ]
+}
