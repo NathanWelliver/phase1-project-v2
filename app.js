@@ -145,13 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
             audio: audioLink,
             cover: coverLink
         };
-
+            console.log(newSong)
         try {
-            // Simulating a server request
-            // In actual implementation, you would make a fetch request to your server
-            // and handle the response accordingly
-            // Here, we push the new song to the songs array
+            const response = fetch('http://localhost:3000/songs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(newSong)
+            });
+    
             songs.push(newSong);
+            
+            const responseData = await response.json();
+            console.log('New song added:', responseData);            
+            
+            // Optionally, you can update the UI after receiving a successful response from the server.
+        } catch (error) {
+        }
+
+       /* try {
+            // Simulating a server request
+            // Here, we push the new song to the songs array
+            
 
             // Updating the UI (for demonstration purposes)
             audioTitle.textContent = newSong.title;
@@ -161,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('New song added:', newSong);
         } catch (error) {
             console.error('Error adding new song:', error);
-        }
+        } */
     });
 
     /// / EVENT LISTENERS ////
