@@ -11,6 +11,24 @@
       "title": "Once in Paris",
       "audio": "audio/once-in-paris-168895.mp3",
       "cover": "photos/Once in Paris.jpg"
+    },
+    {
+      "id": 3,
+      "title": "On the Highline",
+      "audio": "audio/Dirk Dehler - On the highline.mp3",
+      "cover": "photos/dirk-dehler.png"
+    },
+    {
+      "id": 4,
+      "title": "Alien Sunlight",
+      "audio": "audio/Johan Vandegriff - Alien Sunlight.mp3",
+      "cover": "photos/Johan-Vandegriff.png"
+    },
+    {
+      "id": 5,
+      "title": "Retrowave",
+      "audio": "audio/Alex-Productions - Retrowave Electronic _ Floating.mp3",
+      "cover": "photos/Alex-Productions.png"
     }
   ]
 }
