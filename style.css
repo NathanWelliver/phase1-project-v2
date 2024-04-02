@@ -20,23 +20,27 @@ body {
   font-family: 'Rubik Mono One', sans-serif;
   height: 100vh;
   background: rgb(238, 174, 202);
-  background: linear-gradient(210deg, rgb(241, 164, 63) 0%, rgb(189, 127, 236) 37%, rgb(109, 100, 238) 100%);
+  background: linear-gradient(210deg, rgb(241, 164, 63) 5%, rgb(190, 92, 209) 37%, rgb(109, 100, 238) 90%);
   display: grid;
   place-items: center;
 }
 
 .music__form--container{
+  display: none;
   padding: 1.5rem 2.5rem;
-  width: stretch;
+  max-width: 500px;
+  min-width: 40vw;
   height: auto;
   background: radial-gradient(closest-side, rgb(241, 164, 63) 20%, rgb(175, 128, 230) 67%, rgb(109, 100, 238));
-  display: none;
+  position: relative;
   border-radius: var(--radius);
 }
 
 .input-text{
   padding: .1rem .3rem;
   border-radius: 10px;
+  max-width: 300px;
+  min-width: 30vw;
 }
 
 .submit{
@@ -63,6 +67,11 @@ body {
   position: relative;
   border-radius: var(--radius);
   cursor: pointer;
+  
+}
+
+#new_music--button .submit .action:is(:hover, :focus) {
+  color: var(--purple);
   
 }
 

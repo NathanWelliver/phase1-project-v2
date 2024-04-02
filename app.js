@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Load songs from "server"
-     function retrieveSongsFromServer() {
-         fetch('http://localhost:3000/songs')
+    function retrieveSongsFromServer() {
+        fetch('http://localhost:3000/songs')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -145,40 +145,20 @@ document.addEventListener('DOMContentLoaded', () => {
             audio: audioLink,
             cover: coverLink
         };
-            console.log(newSong)
-        try {
-            const response = fetch('http://localhost:3000/songs', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: "application/json"
-                },
-                body: JSON.stringify(newSong)
-            });
-    
-            songs.push(newSong);
             
-            const responseData = await response.json();
-            console.log('New song added:', responseData);            
-            
-            // Optionally, you can update the UI after receiving a successful response from the server.
-        } catch (error) {
-        }
-
-       /* try {
-            // Simulating a server request
-            // Here, we push the new song to the songs array
-            
-
-            // Updating the UI (for demonstration purposes)
-            audioTitle.textContent = newSong.title;
-            audio.src = newSong.audio;
-            audioImage.style.backgroundImage = `url('${newSong.cover}')`;
-
-            console.log('New song added:', newSong);
-        } catch (error) {
-            console.error('Error adding new song:', error);
-        } */
+        fetch('http://localhost:3000/songs', {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json',
+                'Accept': 'applicaton/json'
+            },
+            body: JSON.stringify(newSong)
+        })
+        .then(res => res.json())
+        .then(data => {
+            loadSong(data);
+            addMusicForm.reset();
+        })
     });
 
     /// / EVENT LISTENERS ////
@@ -205,8 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
             newSongContainer.style.display = "none";
         }
     });
-
-    // Form for new songs additions
 
 
 
