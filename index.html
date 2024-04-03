@@ -17,7 +17,7 @@
 <body>
 
   <p id="add__new--music">
-    Found a new song? <button id="new__music--button">Add it here!</button>
+    Found a new song? <button id="new__music--button" class="button">Add it here!</button>
   </p>
 
   <div class="music__form--container" >
@@ -42,9 +42,9 @@
       <br />
       <input
       type="text"
-      name="new__music--img"
+      name="new__music--author"
       value=""
-      placeholder="Link/File for the song's cover art"
+      placeholder="Author of the song"
       class="input-text"
       />
       <br />
@@ -57,14 +57,15 @@
     </form>
   </div>
 
+  <div id="music_list">
+    <h2>Song List:</h2>
+  </div>
+
   <div class="music__container">
     <audio id="audio"></audio>
     <h2 class="music__title">Beach Music</h2>
     <div class="music__img"></div>
     <div class="music__player">
-      <div class="music__player--progress">
-        <div class="progress"></div>
-      </div>
       <button id="prev" class="action">
         <i class="ph-skip-back-circle"></i>
       </button>
@@ -74,7 +75,6 @@
       <button id="next" class="action">
         <i class="ph-skip-forward-circle"></i>
       </button>
-      <button class="speed"><p>1.0x</p></button>
     </div>
   </div>
 
