@@ -2,33 +2,38 @@
   "songs": [
     {
       "id": "1",
-      "title": "Titanium",
-      "audio": "audio/titanium-170190.mp3",
-      "cover": "photos/TitaniumSongImg.jpg"
+      "title": "Drama",
+      "audio": "audio/HoliznaCC0 - Drama.mp3",
+      "cover": "photos/Drama.jpg",
+      "author": "HoliznaCC0"
     },
     {
       "id": "2",
-      "title": "Once in Paris",
-      "audio": "audio/once-in-paris-168895.mp3",
-      "cover": "photos/Once in Paris.jpg"
+      "title": "Wave of the Synth",
+      "audio": "audio/Uncan - Wave of the Synth.mp3",
+      "cover": "photos/Wave of the Synth-Uncan.png",
+      "author": "Uncan"
     },
     {
       "id": "3",
       "title": "On the Highline",
       "audio": "audio/Dirk Dehler - On the highline.mp3",
-      "cover": "photos/dirk-dehler.png"
+      "cover": "photos/dirk-dehler.png",
+      "author": "Dirk Dehler"
     },
     {
       "id": "4",
       "title": "Alien Sunlight",
       "audio": "audio/Johan Vandegriff - Alien Sunlight.mp3",
-      "cover": "photos/Johan-Vandegriff.png"
+      "cover": "photos/Johan-Vandegriff.png",
+      "author": "Johan Vandegriff"
     },
     {
       "id": "5",
       "title": "Retrowave",
       "audio": "audio/Alex-Productions - Retrowave Electronic _ Floating.mp3",
-      "cover": "photos/Alex-Productions.png"
+      "cover": "photos/Alex-Productions.png",
+      "author": "Alex Productions"
     }
   ]
 }
