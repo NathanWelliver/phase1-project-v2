@@ -20,27 +20,23 @@ body {
   font-family: 'Rubik Mono One', sans-serif;
   height: 100vh;
   background: rgb(238, 174, 202);
-  background: linear-gradient(210deg, rgb(241, 164, 63) 5%, rgb(190, 92, 209) 37%, rgb(109, 100, 238) 90%);
+  background: linear-gradient(210deg, rgb(241, 164, 63) 0%, rgb(189, 127, 236) 37%, rgb(109, 100, 238) 100%);
   display: grid;
   place-items: center;
 }
 
 .music__form--container{
-  display: none;
   padding: 1.5rem 2.5rem;
-  max-width: 500px;
-  min-width: 40vw;
+  width: stretch;
   height: auto;
   background: radial-gradient(closest-side, rgb(241, 164, 63) 20%, rgb(175, 128, 230) 67%, rgb(109, 100, 238));
-  position: relative;
+  display: none;
   border-radius: var(--radius);
 }
 
 .input-text{
   padding: .1rem .3rem;
   border-radius: 10px;
-  max-width: 300px;
-  min-width: 30vw;
 }
 
 .submit{
@@ -67,11 +63,6 @@ body {
   position: relative;
   border-radius: var(--radius);
   cursor: pointer;
-  
-}
-
-#new_music--button .submit .action:is(:hover, :focus) {
-  color: var(--purple);
   
 }
 
@@ -121,10 +112,6 @@ body {
   transition: var(--transition);
 }
 
-.music__player.playing {
-  border-radius: 0 0 var(--radius) var(--radius);
-}
-
 .action {
   background-color: var(--light);
   color: var(--orange);
@@ -138,59 +125,4 @@ body {
   color: var(--purple);
   outline: none;
   transition: var(--transition);
-}
-
-.music__player--progress {
-  position: absolute;
-  z-index: -1;
-  height: 10px;
-  width: 100%;
-  top: -10%;
-  background-color: var(--orange);
-  overflow: hidden;
-  border-radius: var(--radius) var(--radius) 0 0;
-  transform: translateY(120%);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.music__player.playing .music__player--progress {
-  transform: translateY(0);
-  z-index: 0;
-}
-
-.progress {
-  position: absolute;
-  background-color: var(--purple);
-  width: 0%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.speed {
-  position: absolute;
-  height: 3.5rem;
-  font-size: inherit;
-  font-family: inherit;
-  color: var(--light);
-  background-color: var(--orange);
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0%);
-  display: grid;
-  place-items: center;
-  padding: .7rem 1rem .5rem;
-  border: 6px solid var(--orange);
-  border-radius: 0 0 var(--radius) var(--radius);
-  z-index: -1;
-  cursor: pointer;
-}
-
-.speed:is(:hover, :focus) {
-  background-color: var(--light);
-  color: var(--orange);
-}
-
-.music__player.playing .speed {
-  transform: translate(-50%, 90%);
 }
